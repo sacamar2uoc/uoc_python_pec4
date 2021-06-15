@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>ej5 API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ej5</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from ej1 import *
+from ej2 import *
+from ej3 import *
+from ej4 import *
+
+import pandas as pd
+import numpy as np
+from datetime import datetime as dt
+
+def main_plot_grades_analysis():
+    &#39;&#39;&#39;
+    Este método es el que llama las diferentes funciones para responder al análisis.
+    Se trabaja con los datos de las entrevistas sobre la concienciación ciudadana frente los efectos de la pandemia.
+    
+    En este método se define el valor de la fecha divisoria.
+    También se selecciona la nota de corte para los agentes entrevistadores.
+    &#39;&#39;&#39;
+    main_data=main_build_main_data()
+    concern_polls=main_data[&#39;concern_polls&#39;]
+    pollster_ratings=main_data[&#39;pollster_ratings&#39;]
+    polls_grade_mapped=build_polls_grade_mapped(pollster_ratings)
+    
+    polls_grade_credibility=build_polls_grade_credibility(polls_grade_mapped)
+    
+    date_filter_value=&#39;2020-09-01&#39;
+    grade_filter_value=1.5
+    
+    people_distr_date_poll_abs=build_people_distr_date_poll(concern_polls,polls_grade_credibility,date_filter_value,grade_filter_value,&#39;absolute&#39;)
+    people_distr_date_poll_perc=build_people_distr_date_poll(concern_polls,polls_grade_credibility,date_filter_value,grade_filter_value,&#39;percentage&#39;)
+    
+    do_plot_grades_dates_analysis(people_distr_date_poll_abs,date_filter_value,&#39;people_distr_date_poll_abs.png&#39;)
+    do_plot_grades_dates_analysis(people_distr_date_poll_perc,date_filter_value,&#39;people_distr_date_poll_perc.png&#39;)
+    
+def build_polls_grade_credibility(data):
+    &#39;&#39;&#39;
+    Este método calcula y añade el credibility sobre el dataframe de origen.
+    Este campo es una métrica que nos ayuda a valorar la calidad del agente encuestador y filtrar sus entrevistas.
+    Input:
+        - Dataframe con datos de las notas por agente entrevistados y Predictive Plus-Minus
+    Output:
+        - Mismo Dataframe con un campo llamado &#34;credibility&#34; que se calcula como la suma de la nota y el Predictive Plus-Minus
+    &#39;&#39;&#39;
+    grade_map={&#39;a&#39;:1,&#39;b&#39;:0.5,&#39;c&#39;:0,&#39;d&#39;:-0.5,&#39;f&#39;:-1}
+    polls_grade_credibility=data.copy()
+    
+    data[&#39;grade_marks&#39;]=data.replace({&#39;grade_reclass&#39;:grade_map})[&#39;grade_reclass&#39;]
+    data[&#39;credibility&#39;]=data[&#39;grade_marks&#39;]+data[&#39;Predictive    Plus-Minus&#39;]
+    
+    polls_grade_credibility[&#39;credibility&#39;]=data[&#39;credibility&#39;]
+    
+    return polls_grade_credibility
+
+def build_people_distr_date_poll(concern_data,polls_data,raw_date,grade_filter,unit):
+    &#39;&#39;&#39;
+    Este método genera un dataframe facilmente explotable en el que se indica el número de personas antes y después por nivel de concienciación.
+    Input:
+        - Dataframe de los datos de las entrevistas sobre la concienciación.
+        - Dataframe de los datos de los agentes entrevistadores.
+        - Fecha límite que separa las entrevistas.
+        - Nota por la cual filtrar los agentes.
+        - Unidad que emplear para los datos: valores absolutos o valores porcentuales.
+    Output:
+        - Dataframe con tres campos:
+            - Un campo para los valores anteriores del número de personas.
+            - Un campo para los valores posteriores del número de personas.
+            - Un campo que clasifica el nivel de concienciación.
+    &#39;&#39;&#39;
+    concern_fields=[&#39;very&#39;,&#39;not_very&#39;,&#39;somewhat&#39;,&#39;not_at_all&#39;]
+    concern_data_filtr_grade=build_concern_polls_grade_filter(grade_filter,concern_data,polls_data)
+    
+    concern_data_before,concern_data_after=build_concern_polls_date_filter(
+                                                raw_date,concern_data_filtr_grade)
+    
+    people_distr_date_poll_dict=build_people_distr_date_poll_dict(concern_data_before,concern_data_after,concern_fields,unit)
+    
+    people_distr_date_poll=pd.DataFrame({&#39;before&#39;:list(people_distr_date_poll_dict[&#39;people_distr_date_poll_before&#39;].values()),
+                                        &#39;after&#39;:list(people_distr_date_poll_dict[&#39;people_distr_date_poll_after&#39;].values()),
+                                        &#39;concern&#39;:concern_fields})
+    
+    return people_distr_date_poll
+
+    
+    
+    
+def build_concern_polls_grade_filter(grade_filter,concern_data,polls_data):
+    &#39;&#39;&#39;
+    Este método filtra las entrevistas por la credibilidad del agente entrevistador.
+    Input:
+        - Dataframe de los datos de los agentes entrevistadores.
+        - Dataframe de las entrevistas sobre concienciación.
+        - Valor de la credibilidad por el cual filtrar a los agentes.
+    Output:
+        - Mismo dataframe de entrada sin los registros que no pasan el filtro.
+    &#39;&#39;&#39;
+    pollster_filtered=polls_data[polls_data[&#39;credibility&#39;]&gt;=grade_filter][&#39;Pollster&#39;].values
+    concern_data_filtr_grade=concern_data[[ 
+                                        p in pollster_filtered 
+                                            for p in concern_data[&#39;pollster&#39;]
+                                        ]]
+    return concern_data_filtr_grade
+
+def build_concern_polls_date_filter(raw_date,concern_data):
+    &#39;&#39;&#39;
+    Este método divide un dataframe por la fecha de finalización de las entrevistas.
+    
+    Input:
+        - Fecha con formato AÑO-MES-DIA, por ejemplo: &#34;2021-01-20&#34;
+        - Dataframe con los datos de las entrevistas, asegurándose que contiene la fecha de finalización.
+    
+    Output:
+        - Una tupla de dos dataframes.
+            - El primero será el de las entrevistas que terminaron antes de la fecha filtro.
+            - El segundo será el de las entrevistas que terminaron después de la fecha filtro.
+    &#39;&#39;&#39;
+    try:
+        dt_date=dt.strptime(raw_date,&#39;%Y-%m-%d&#39;)
+    except Exception as e:
+        print(e)
+        print(&#39;La fecha ha de estar en el siguiente formato: año-mes-dia, por ejemplo: 2020-09-21&#39;)
+        return 0
+    
+    concern_data_before=concern_data[[
+                                        dt.strptime(d,&#39;%Y-%m-%d&#39;)&lt;=dt_date
+                                        for d in concern_data[&#39;end_date&#39;]
+                                     ]]
+    
+    concern_data_after=concern_data[[
+                                        dt.strptime(d,&#39;%Y-%m-%d&#39;)&gt;=dt_date
+                                        for d in concern_data[&#39;end_date&#39;]
+                                     ]]
+    return concern_data_before, concern_data_after
+
+def build_people_distr_date_poll_dict(concern_data_before,concern_data_after,concern_fields,unit):
+    &#39;&#39;&#39;
+    Este método calcula los valores de gente según su nivel de concienciación antes y después de una fecha dando como resultado una diccionario.
+    Input:
+        - Dataframe de los datos de las entrevistas antes de una fecha.
+        - Dataframe de los datos de las entrevistas después de una fecha.
+        - Campos del nivel de concienciación que se quieren emplear.
+        - Unidad en la que estará el resultado: valor absoluto (absolute) o porcentaje (porcentage)
+    
+    Output:
+        - Un diccionario que contiene dos diccionarios de valores:
+            - El primer diccionario es el de los valores antes de la fecha seleccionada.
+                Su nombre: &#34;people_distr_date_poll_before&#34;
+            - El segundo diccionario es el de los valores después de la fecha seleccionada.
+                Su nombre: &#34;people_distr_date_poll_after&#34;
+            
+            Dentro de cada diccionario habrá una pareja clave-valor con este formato:
+                &#34;nivel de concienciación&#34;:valor numérico
+            Por ejemplo:
+                &#34;very&#34;:15
+    &#39;&#39;&#39;
+    t_field=&#39;sample_size&#39;
+    unit=unit.lower()
+    people_distr_date_poll_before,people_distr_date_poll_after={},{}
+    
+    if unit==&#39;absolute&#39;:
+        concern_data_before=build_absolute_numbers_data(concern_fields,
+            t_field,concern_data_before)
+        
+        concern_data_after=build_absolute_numbers_data(concern_fields,
+            t_field,concern_data_after)
+        
+        for c in concern_fields:
+            people_distr_date_poll_before[c]=sum(concern_data_before[c].replace(&#39;&#39;,0).astype(float))
+            people_distr_date_poll_after[c]=sum(concern_data_after[c].replace(&#39;&#39;,0).astype(float))
+        
+    elif unit==&#39;percentage&#39;:
+        for c in concern_fields:
+            people_distr_date_poll_before[c]=np.mean(concern_data_before[c].replace(&#39;&#39;,0).astype(float))
+            people_distr_date_poll_after[c]=np.mean(concern_data_after[c].replace(&#39;&#39;,0).astype(float))
+            
+    elif unit!=&#39;percentage&#39;:
+        print(&#39;La unidad escogida no es correcta. \
+            Los valores permitidos son &#34;absolute&#34; y &#34;percentage&#34;&#39;)
+        return 0
+    
+    
+    people_distr_date_poll_dict={
+                                    &#39;people_distr_date_poll_before&#39;:people_distr_date_poll_before,
+                                    &#39;people_distr_date_poll_after&#39;:people_distr_date_poll_after
+                                }
+    
+    return people_distr_date_poll_dict  
+
+
+
+def do_plot_grades_dates_analysis(distr_data,date_value,pic_name):
+    &#39;&#39;&#39;
+    Este método crea y guarda una gráfica sobre el número de personas y su concienciación, antes y despues.
+    Input:
+        - Dataframe sobre la distribución del número de personas.
+        - Fecha divisoria para personalizar el título del gráfico.
+        - Nombre de la imagen del gráfico.
+    &#39;&#39;&#39;
+    classes_name=distr_data[&#39;concern&#39;].values
+    indexes_bar = np.arange(len(classes_name)*2+1)
+    before_data,after_data=distr_data[&#39;before&#39;].values,distr_data[&#39;after&#39;].values
+    wid=1
+    fig = plt.figure(figsize=(10,5))
+    ax = fig.add_subplot(111)
+    
+    ax.bar(color=&#39;khaki&#39;,height=before_data,x=indexes_bar[:len(classes_name)],width=wid)
+    ax.bar(color=&#39;white&#39;,height=before_data[0],x=indexes_bar[len(classes_name)],width=wid)
+    ax.bar(color=&#39;coral&#39;,height=after_data,x=indexes_bar[len(classes_name)+1:],width=wid)
+    ax.set_xticks(indexes_bar)
+    ax.set_xticklabels(list(classes_name)+list([&#39;&#39;])+list(classes_name))
+    
+    plt.legend([&#39;Before&#39;,&#39;&#39;,&#39;After&#39;])
+    plt.title(f&#39;Distribución de la concienciación de las personas antes y después de {date_value}&#39;)
+    plt.savefig(pic_name)
+    
+    plt.close()
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="ej5.build_concern_polls_date_filter"><code class="name flex">
+<span>def <span class="ident">build_concern_polls_date_filter</span></span>(<span>raw_date, concern_data)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método divide un dataframe por la fecha de finalización de las entrevistas.</p>
+<h2 id="input">Input</h2>
+<ul>
+<li>Fecha con formato AÑO-MES-DIA, por ejemplo: "2021-01-20"</li>
+<li>Dataframe con los datos de las entrevistas, asegurándose que contiene la fecha de finalización.</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>Una tupla de dos dataframes.<ul>
+<li>El primero será el de las entrevistas que terminaron antes de la fecha filtro.</li>
+<li>El segundo será el de las entrevistas que terminaron después de la fecha filtro.</li>
+</ul>
+</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_concern_polls_date_filter(raw_date,concern_data):
+    &#39;&#39;&#39;
+    Este método divide un dataframe por la fecha de finalización de las entrevistas.
+    
+    Input:
+        - Fecha con formato AÑO-MES-DIA, por ejemplo: &#34;2021-01-20&#34;
+        - Dataframe con los datos de las entrevistas, asegurándose que contiene la fecha de finalización.
+    
+    Output:
+        - Una tupla de dos dataframes.
+            - El primero será el de las entrevistas que terminaron antes de la fecha filtro.
+            - El segundo será el de las entrevistas que terminaron después de la fecha filtro.
+    &#39;&#39;&#39;
+    try:
+        dt_date=dt.strptime(raw_date,&#39;%Y-%m-%d&#39;)
+    except Exception as e:
+        print(e)
+        print(&#39;La fecha ha de estar en el siguiente formato: año-mes-dia, por ejemplo: 2020-09-21&#39;)
+        return 0
+    
+    concern_data_before=concern_data[[
+                                        dt.strptime(d,&#39;%Y-%m-%d&#39;)&lt;=dt_date
+                                        for d in concern_data[&#39;end_date&#39;]
+                                     ]]
+    
+    concern_data_after=concern_data[[
+                                        dt.strptime(d,&#39;%Y-%m-%d&#39;)&gt;=dt_date
+                                        for d in concern_data[&#39;end_date&#39;]
+                                     ]]
+    return concern_data_before, concern_data_after</code></pre>
+</details>
+</dd>
+<dt id="ej5.build_concern_polls_grade_filter"><code class="name flex">
+<span>def <span class="ident">build_concern_polls_grade_filter</span></span>(<span>grade_filter, concern_data, polls_data)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método filtra las entrevistas por la credibilidad del agente entrevistador.</p>
+<h2 id="input">Input</h2>
+<ul>
+<li>Dataframe de los datos de los agentes entrevistadores.</li>
+<li>Dataframe de las entrevistas sobre concienciación.</li>
+<li>Valor de la credibilidad por el cual filtrar a los agentes.</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>Mismo dataframe de entrada sin los registros que no pasan el filtro.</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_concern_polls_grade_filter(grade_filter,concern_data,polls_data):
+    &#39;&#39;&#39;
+    Este método filtra las entrevistas por la credibilidad del agente entrevistador.
+    Input:
+        - Dataframe de los datos de los agentes entrevistadores.
+        - Dataframe de las entrevistas sobre concienciación.
+        - Valor de la credibilidad por el cual filtrar a los agentes.
+    Output:
+        - Mismo dataframe de entrada sin los registros que no pasan el filtro.
+    &#39;&#39;&#39;
+    pollster_filtered=polls_data[polls_data[&#39;credibility&#39;]&gt;=grade_filter][&#39;Pollster&#39;].values
+    concern_data_filtr_grade=concern_data[[ 
+                                        p in pollster_filtered 
+                                            for p in concern_data[&#39;pollster&#39;]
+                                        ]]
+    return concern_data_filtr_grade</code></pre>
+</details>
+</dd>
+<dt id="ej5.build_people_distr_date_poll"><code class="name flex">
+<span>def <span class="ident">build_people_distr_date_poll</span></span>(<span>concern_data, polls_data, raw_date, grade_filter, unit)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método genera un dataframe facilmente explotable en el que se indica el número de personas antes y después por nivel de concienciación.</p>
+<h2 id="input">Input</h2>
+<ul>
+<li>Dataframe de los datos de las entrevistas sobre la concienciación.</li>
+<li>Dataframe de los datos de los agentes entrevistadores.</li>
+<li>Fecha límite que separa las entrevistas.</li>
+<li>Nota por la cual filtrar los agentes.</li>
+<li>Unidad que emplear para los datos: valores absolutos o valores porcentuales.</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>Dataframe con tres campos:<ul>
+<li>Un campo para los valores anteriores del número de personas.</li>
+<li>Un campo para los valores posteriores del número de personas.</li>
+<li>Un campo que clasifica el nivel de concienciación.</li>
+</ul>
+</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_people_distr_date_poll(concern_data,polls_data,raw_date,grade_filter,unit):
+    &#39;&#39;&#39;
+    Este método genera un dataframe facilmente explotable en el que se indica el número de personas antes y después por nivel de concienciación.
+    Input:
+        - Dataframe de los datos de las entrevistas sobre la concienciación.
+        - Dataframe de los datos de los agentes entrevistadores.
+        - Fecha límite que separa las entrevistas.
+        - Nota por la cual filtrar los agentes.
+        - Unidad que emplear para los datos: valores absolutos o valores porcentuales.
+    Output:
+        - Dataframe con tres campos:
+            - Un campo para los valores anteriores del número de personas.
+            - Un campo para los valores posteriores del número de personas.
+            - Un campo que clasifica el nivel de concienciación.
+    &#39;&#39;&#39;
+    concern_fields=[&#39;very&#39;,&#39;not_very&#39;,&#39;somewhat&#39;,&#39;not_at_all&#39;]
+    concern_data_filtr_grade=build_concern_polls_grade_filter(grade_filter,concern_data,polls_data)
+    
+    concern_data_before,concern_data_after=build_concern_polls_date_filter(
+                                                raw_date,concern_data_filtr_grade)
+    
+    people_distr_date_poll_dict=build_people_distr_date_poll_dict(concern_data_before,concern_data_after,concern_fields,unit)
+    
+    people_distr_date_poll=pd.DataFrame({&#39;before&#39;:list(people_distr_date_poll_dict[&#39;people_distr_date_poll_before&#39;].values()),
+                                        &#39;after&#39;:list(people_distr_date_poll_dict[&#39;people_distr_date_poll_after&#39;].values()),
+                                        &#39;concern&#39;:concern_fields})
+    
+    return people_distr_date_poll</code></pre>
+</details>
+</dd>
+<dt id="ej5.build_people_distr_date_poll_dict"><code class="name flex">
+<span>def <span class="ident">build_people_distr_date_poll_dict</span></span>(<span>concern_data_before, concern_data_after, concern_fields, unit)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método calcula los valores de gente según su nivel de concienciación antes y después de una fecha dando como resultado una diccionario.</p>
+<h2 id="input">Input</h2>
+<ul>
+<li>Dataframe de los datos de las entrevistas antes de una fecha.</li>
+<li>Dataframe de los datos de las entrevistas después de una fecha.</li>
+<li>Campos del nivel de concienciación que se quieren emplear.</li>
+<li>Unidad en la que estará el resultado: valor absoluto (absolute) o porcentaje (porcentage)</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>
+<p>Un diccionario que contiene dos diccionarios de valores:</p>
+<ul>
+<li>El primer diccionario es el de los valores antes de la fecha seleccionada.
+Su nombre: "people_distr_date_poll_before"</li>
+<li>El segundo diccionario es el de los valores después de la fecha seleccionada.
+Su nombre: "people_distr_date_poll_after"</li>
+</ul>
+<p>Dentro de cada diccionario habrá una pareja clave-valor con este formato:
+"nivel de concienciación":valor numérico
+Por ejemplo:
+"very":15</p>
+</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_people_distr_date_poll_dict(concern_data_before,concern_data_after,concern_fields,unit):
+    &#39;&#39;&#39;
+    Este método calcula los valores de gente según su nivel de concienciación antes y después de una fecha dando como resultado una diccionario.
+    Input:
+        - Dataframe de los datos de las entrevistas antes de una fecha.
+        - Dataframe de los datos de las entrevistas después de una fecha.
+        - Campos del nivel de concienciación que se quieren emplear.
+        - Unidad en la que estará el resultado: valor absoluto (absolute) o porcentaje (porcentage)
+    
+    Output:
+        - Un diccionario que contiene dos diccionarios de valores:
+            - El primer diccionario es el de los valores antes de la fecha seleccionada.
+                Su nombre: &#34;people_distr_date_poll_before&#34;
+            - El segundo diccionario es el de los valores después de la fecha seleccionada.
+                Su nombre: &#34;people_distr_date_poll_after&#34;
+            
+            Dentro de cada diccionario habrá una pareja clave-valor con este formato:
+                &#34;nivel de concienciación&#34;:valor numérico
+            Por ejemplo:
+                &#34;very&#34;:15
+    &#39;&#39;&#39;
+    t_field=&#39;sample_size&#39;
+    unit=unit.lower()
+    people_distr_date_poll_before,people_distr_date_poll_after={},{}
+    
+    if unit==&#39;absolute&#39;:
+        concern_data_before=build_absolute_numbers_data(concern_fields,
+            t_field,concern_data_before)
+        
+        concern_data_after=build_absolute_numbers_data(concern_fields,
+            t_field,concern_data_after)
+        
+        for c in concern_fields:
+            people_distr_date_poll_before[c]=sum(concern_data_before[c].replace(&#39;&#39;,0).astype(float))
+            people_distr_date_poll_after[c]=sum(concern_data_after[c].replace(&#39;&#39;,0).astype(float))
+        
+    elif unit==&#39;percentage&#39;:
+        for c in concern_fields:
+            people_distr_date_poll_before[c]=np.mean(concern_data_before[c].replace(&#39;&#39;,0).astype(float))
+            people_distr_date_poll_after[c]=np.mean(concern_data_after[c].replace(&#39;&#39;,0).astype(float))
+            
+    elif unit!=&#39;percentage&#39;:
+        print(&#39;La unidad escogida no es correcta. \
+            Los valores permitidos son &#34;absolute&#34; y &#34;percentage&#34;&#39;)
+        return 0
+    
+    
+    people_distr_date_poll_dict={
+                                    &#39;people_distr_date_poll_before&#39;:people_distr_date_poll_before,
+                                    &#39;people_distr_date_poll_after&#39;:people_distr_date_poll_after
+                                }
+    
+    return people_distr_date_poll_dict  </code></pre>
+</details>
+</dd>
+<dt id="ej5.build_polls_grade_credibility"><code class="name flex">
+<span>def <span class="ident">build_polls_grade_credibility</span></span>(<span>data)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método calcula y añade el credibility sobre el dataframe de origen.
+Este campo es una métrica que nos ayuda a valorar la calidad del agente encuestador y filtrar sus entrevistas.</p>
+<h2 id="input">Input</h2>
+<ul>
+<li>Dataframe con datos de las notas por agente entrevistados y Predictive Plus-Minus</li>
+</ul>
+<h2 id="output">Output</h2>
+<ul>
+<li>Mismo Dataframe con un campo llamado "credibility" que se calcula como la suma de la nota y el Predictive Plus-Minus</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build_polls_grade_credibility(data):
+    &#39;&#39;&#39;
+    Este método calcula y añade el credibility sobre el dataframe de origen.
+    Este campo es una métrica que nos ayuda a valorar la calidad del agente encuestador y filtrar sus entrevistas.
+    Input:
+        - Dataframe con datos de las notas por agente entrevistados y Predictive Plus-Minus
+    Output:
+        - Mismo Dataframe con un campo llamado &#34;credibility&#34; que se calcula como la suma de la nota y el Predictive Plus-Minus
+    &#39;&#39;&#39;
+    grade_map={&#39;a&#39;:1,&#39;b&#39;:0.5,&#39;c&#39;:0,&#39;d&#39;:-0.5,&#39;f&#39;:-1}
+    polls_grade_credibility=data.copy()
+    
+    data[&#39;grade_marks&#39;]=data.replace({&#39;grade_reclass&#39;:grade_map})[&#39;grade_reclass&#39;]
+    data[&#39;credibility&#39;]=data[&#39;grade_marks&#39;]+data[&#39;Predictive    Plus-Minus&#39;]
+    
+    polls_grade_credibility[&#39;credibility&#39;]=data[&#39;credibility&#39;]
+    
+    return polls_grade_credibility</code></pre>
+</details>
+</dd>
+<dt id="ej5.do_plot_grades_dates_analysis"><code class="name flex">
+<span>def <span class="ident">do_plot_grades_dates_analysis</span></span>(<span>distr_data, date_value, pic_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método crea y guarda una gráfica sobre el número de personas y su concienciación, antes y despues.</p>
+<h2 id="input">Input</h2>
+<ul>
+<li>Dataframe sobre la distribución del número de personas.</li>
+<li>Fecha divisoria para personalizar el título del gráfico.</li>
+<li>Nombre de la imagen del gráfico.</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def do_plot_grades_dates_analysis(distr_data,date_value,pic_name):
+    &#39;&#39;&#39;
+    Este método crea y guarda una gráfica sobre el número de personas y su concienciación, antes y despues.
+    Input:
+        - Dataframe sobre la distribución del número de personas.
+        - Fecha divisoria para personalizar el título del gráfico.
+        - Nombre de la imagen del gráfico.
+    &#39;&#39;&#39;
+    classes_name=distr_data[&#39;concern&#39;].values
+    indexes_bar = np.arange(len(classes_name)*2+1)
+    before_data,after_data=distr_data[&#39;before&#39;].values,distr_data[&#39;after&#39;].values
+    wid=1
+    fig = plt.figure(figsize=(10,5))
+    ax = fig.add_subplot(111)
+    
+    ax.bar(color=&#39;khaki&#39;,height=before_data,x=indexes_bar[:len(classes_name)],width=wid)
+    ax.bar(color=&#39;white&#39;,height=before_data[0],x=indexes_bar[len(classes_name)],width=wid)
+    ax.bar(color=&#39;coral&#39;,height=after_data,x=indexes_bar[len(classes_name)+1:],width=wid)
+    ax.set_xticks(indexes_bar)
+    ax.set_xticklabels(list(classes_name)+list([&#39;&#39;])+list(classes_name))
+    
+    plt.legend([&#39;Before&#39;,&#39;&#39;,&#39;After&#39;])
+    plt.title(f&#39;Distribución de la concienciación de las personas antes y después de {date_value}&#39;)
+    plt.savefig(pic_name)
+    
+    plt.close()</code></pre>
+</details>
+</dd>
+<dt id="ej5.main_plot_grades_analysis"><code class="name flex">
+<span>def <span class="ident">main_plot_grades_analysis</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Este método es el que llama las diferentes funciones para responder al análisis.
+Se trabaja con los datos de las entrevistas sobre la concienciación ciudadana frente los efectos de la pandemia.</p>
+<p>En este método se define el valor de la fecha divisoria.
+También se selecciona la nota de corte para los agentes entrevistadores.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main_plot_grades_analysis():
+    &#39;&#39;&#39;
+    Este método es el que llama las diferentes funciones para responder al análisis.
+    Se trabaja con los datos de las entrevistas sobre la concienciación ciudadana frente los efectos de la pandemia.
+    
+    En este método se define el valor de la fecha divisoria.
+    También se selecciona la nota de corte para los agentes entrevistadores.
+    &#39;&#39;&#39;
+    main_data=main_build_main_data()
+    concern_polls=main_data[&#39;concern_polls&#39;]
+    pollster_ratings=main_data[&#39;pollster_ratings&#39;]
+    polls_grade_mapped=build_polls_grade_mapped(pollster_ratings)
+    
+    polls_grade_credibility=build_polls_grade_credibility(polls_grade_mapped)
+    
+    date_filter_value=&#39;2020-09-01&#39;
+    grade_filter_value=1.5
+    
+    people_distr_date_poll_abs=build_people_distr_date_poll(concern_polls,polls_grade_credibility,date_filter_value,grade_filter_value,&#39;absolute&#39;)
+    people_distr_date_poll_perc=build_people_distr_date_poll(concern_polls,polls_grade_credibility,date_filter_value,grade_filter_value,&#39;percentage&#39;)
+    
+    do_plot_grades_dates_analysis(people_distr_date_poll_abs,date_filter_value,&#39;people_distr_date_poll_abs.png&#39;)
+    do_plot_grades_dates_analysis(people_distr_date_poll_perc,date_filter_value,&#39;people_distr_date_poll_perc.png&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="ej5.build_concern_polls_date_filter" href="#ej5.build_concern_polls_date_filter">build_concern_polls_date_filter</a></code></li>
+<li><code><a title="ej5.build_concern_polls_grade_filter" href="#ej5.build_concern_polls_grade_filter">build_concern_polls_grade_filter</a></code></li>
+<li><code><a title="ej5.build_people_distr_date_poll" href="#ej5.build_people_distr_date_poll">build_people_distr_date_poll</a></code></li>
+<li><code><a title="ej5.build_people_distr_date_poll_dict" href="#ej5.build_people_distr_date_poll_dict">build_people_distr_date_poll_dict</a></code></li>
+<li><code><a title="ej5.build_polls_grade_credibility" href="#ej5.build_polls_grade_credibility">build_polls_grade_credibility</a></code></li>
+<li><code><a title="ej5.do_plot_grades_dates_analysis" href="#ej5.do_plot_grades_dates_analysis">do_plot_grades_dates_analysis</a></code></li>
+<li><code><a title="ej5.main_plot_grades_analysis" href="#ej5.main_plot_grades_analysis">main_plot_grades_analysis</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
