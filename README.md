@@ -52,4 +52,4 @@ Para una investigación más cómoda del código aconsejo abrir el archivo html 
 No se ha empleado el estándar de utils para encapsular todas las funciones para una evaluación más sencilla del código.
 
 ## Licencia
-Este código está bajo la licencia Apace License 2.0
+[Este código está bajo la licencia Apace License 2.0]: https://github.com/sacamar2uoc/uoc_python_pec4/blob/main/LICENSE
